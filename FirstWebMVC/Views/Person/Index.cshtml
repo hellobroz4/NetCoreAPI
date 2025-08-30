@@ -1,6 +1,6 @@
 <h1>Dữ liệu từ Controller gửi về là: @ViewBag.infoPerson</h1>
 
-<from asp-action="Index">
+<form asp-action="Index" method="post">
     <label>Nhập PersonId</label>
     <input type="text" name="PersonId">
     <label>Nhập họ tên:</label>
@@ -8,4 +8,5 @@
     <label>Nhập địa chỉ:</label>
     <input type="text" name="Address">
     <input type="submit" value="Gửi dữ liệu">
-</from>
+</form>
+
