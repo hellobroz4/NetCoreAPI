@@ -1,4 +1,4 @@
-namespace FirstWebMVC.Models;
+namespace baithuchanh.Models;
 
 public class ErrorViewModel
 {
