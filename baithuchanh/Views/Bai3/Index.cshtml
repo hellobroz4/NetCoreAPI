@@ -1,0 +1,27 @@
+<script>
+    function tinhBMI() {
+        let canNang = parseFloat(document.getElementById("canNang").value);
+        let chieuCao = parseFloat(document.getElementById("chieuCao").value);
+
+        // Nếu nhập cm thì đổi sang m
+        if (chieuCao > 10) {
+            chieuCao = chieuCao / 100;
+        }
+
+        let bmi = canNang / (chieuCao * chieuCao);
+        let ketQua = "";
+
+        if (bmi < 18.5) {
+            ketQua = "Gầy";
+        } else if (bmi < 25) {
+            ketQua = "Bình thường";
+        } else if (bmi < 30) {
+            ketQua = "Thừa cân";
+        } else {
+            ketQua = "Béo phì";
+        }
+
+        document.getElementById("ketQua").innerHTML =
+            "Chỉ số BMI = " + bmi.toFixed(2) + " (" + ketQua + ")";
+    }
+</script>

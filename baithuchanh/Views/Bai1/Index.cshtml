@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "Bài 1 - Họ tên và tuổi";
+}
+
+<h2>Bài 1: Nhập năm sinh và tính tuổi</h2>
+
+<form>
+    Họ tên: <input type="text" id="hoTen" /><br /><br />
+    Năm sinh: <input type="number" id="namSinh" /><br /><br />
+    <button type="button" onclick="tinhTuoi()">Hiển thị kết quả</button>
+</form>
+
+<p id="ketQua"></p>
+
+<script>
+    function tinhTuoi() {
+        let hoTen = document.getElementById("hoTen").value;
+        let namSinh = parseInt(document.getElementById("namSinh").value);
+        let namHienTai = new Date().getFullYear();
+        let tuoi = namHienTai - namSinh;
+
+        document.getElementById("ketQua").innerHTML =
+            "Họ tên: " + hoTen + "<br>Tuổi: " + tuoi;
+    }
+</script>

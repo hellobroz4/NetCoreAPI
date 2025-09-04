@@ -1,0 +1,38 @@
+@{
+    ViewData["Title"] = "Bài 2 - Phép tính";
+}
+
+<h2>Bài 2: Nhập 2 số và chọn phép tính</h2>
+
+<form>
+    Số thứ nhất: <input type="number" id="so1"><br><br>
+    Số thứ hai: <input type="number" id="so2"><br><br>
+    Chọn phép tính:
+    <select id="phepTinh">
+        <option value="tong">Tổng</option>
+        <option value="hieu">Hiệu</option>
+        <option value="tich">Tích</option>
+        <option value="thuong">Thương</option>
+    </select><br><br>
+    <button type="button" onclick="tinhToan()">Hiển thị kết quả</button>
+</form>
+
+<p id="ketQua"></p>
+
+<script>
+    function tinhToan() {
+        let a = parseFloat(document.getElementById("so1").value);
+        let b = parseFloat(document.getElementById("so2").value);
+        let phepTinh = document.getElementById("phepTinh").value;
+        let ketQua;
+
+        if (phepTinh === "tong") ketQua = a + b;
+        else if (phepTinh === "hieu") ketQua = a - b;
+        else if (phepTinh === "tich") ketQua = a * b;
+        else if (phepTinh === "thuong") {
+            ketQua = b !== 0 ? (a / b) : "Không thể chia cho 0";
+        }
+
+        document.getElementById("ketQua").innerHTML = "Kết quả: " + ketQua;
+    }
+</script>
