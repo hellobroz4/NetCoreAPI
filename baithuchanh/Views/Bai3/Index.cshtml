@@ -1,6 +1,26 @@
+@{
+    ViewData["Title"] = "Bài 3 - CanNang va ChieuCao";
+}
+<form onsubmit="event.preventDefault(); tinhBMI();">
+    <div>
+        <label for="CanNang">Cân nặng (kg): </label>
+        <input type="number" id="CanNang" name="CanNang" step="0.1" required />
+    </div>
+
+    <div>
+        <label for="chieuCao">Chiều cao (m hoặc cm): </label>
+        <input type="number" id="chieuCao" name="chieuCao" step="0.01" required />
+    </div>
+
+    <div style="margin-top:10px;">
+        <button type="submit">Tính BMI</button>
+    </div>
+</form>
+
+<p id="ketQua" style="margin-top:15px; font-weight:bold;"></p>
 <script>
     function tinhBMI() {
-        let canNang = parseFloat(document.getElementById("canNang").value);
+        let canNang = parseFloat(document.getElementById("CanNang").value);
         let chieuCao = parseFloat(document.getElementById("chieuCao").value);
 
         // Nếu nhập cm thì đổi sang m
