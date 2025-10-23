@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using baithuchanh.Models;
-using MvcMovie.Models;
+using baithuchanh.Models;
 
 namespace baithuchanh.Data
 {
