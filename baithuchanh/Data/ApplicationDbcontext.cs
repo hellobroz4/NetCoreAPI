@@ -11,5 +11,7 @@ namespace baithuchanh.Data
         }
 
         public DbSet<Person> Person { get; set; }
+        public DbSet<Employee> Employee { get; set; } = default!;
+        public DbSet<baithuchanh.Models.NhanVien> NhanVien { get; set; } = default!;
     }
 }
